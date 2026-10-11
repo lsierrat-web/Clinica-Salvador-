@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Salvador - Cuidamos de ti</title>
+    <!-- Favicon para la pestaña del navegador -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><path fill=%22%230284c7%22 d=%22M256 0c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm-32 224h64c61.9 0 112 50.1 112 112v48c0 26.5-21.5 48-48 48H112c-26.5 0-48-21.5-48-48v-48c0-61.9 50.1-112 112-112z%22/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-user-doctor"></i> Clínica <span>Salvador</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Especialidades</a>
+                <a href="#citas" class="btn-primary">Agendar Cita</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Tu salud y bienestar en manos de expertos</h1>
+                <p>En Clínica Salvador brindamos atención médica integral con la más alta tecnología y el calor humano que tú y tu familia merecen.</p>
+                <div class="hero-btns">
+                    <a href="#citas" class="btn-primary">Reservar Cita</a>
+                    <a href="#servicios" class="btn-secondary">Nuestras Especialidades</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <h3>Atención de Urgencias</h3>
+                <p>Servicio disponible las 24 horas, los 365 días del año.</p>
+                <a href="tel:+123456789" class="urgencia-link"><i class="fa-solid fa-phone"></i> Llamar a Emergencias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades y Doctores -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestras Especialidades</h2>
+            <p class="section-subtitle">Haz clic en una especialidad para ver los doctores disponibles y agendar tu cita directamente.</p>
+            
+            <div class="services-grid">
+                <!-- Cardiología -->
+                <div class="service-card" data-specialty="cardiologia">
+                    <div class="card-header">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h3>Cardiología</h3>
+                        <p>Cuidado especializado para la salud de tu corazón con diagnósticos avanzados.</p>
+                        <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i> Ver Doctores</span>
+                    </div>
+                    <div class="doctors-list" style="display: none;">
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dr. Carlos Mendoza</strong>
+                                <small>Cardiólogo Clínico</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dr. Carlos Mendoza" data-spec="cardiologia">Agendar</button>
+                        </div>
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dr. Alejandro Ríos</strong>
+                                <small>Electrofisiólogo</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dr. Alejandro Ríos" data-spec="cardiologia">Agendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pediatría -->
+                <div class="service-card" data-specialty="pediatria">
+                    <div class="card-header">
+                        <i class="fa-solid fa-baby"></i>
+                        <h3>Pediatría</h3>
+                        <p>Atención médica cálida y dedicada para el crecimiento saludable de tus hijos.</p>
+                        <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i> Ver Doctores</span>
+                    </div>
+                    <div class="doctors-list" style="display: none;">
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dra. Elena Gómez</strong>
+                                <small>Pediatra General</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dra. Elena Gómez" data-spec="pediatria">Agendar</button>
+                        </div>
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dr. Roberto Torres</strong>
+                                <small>Neonatólogo</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dr. Roberto Torres" data-spec="pediatria">Agendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurología -->
+                <div class="service-card" data-specialty="neurologia">
+                    <div class="card-header">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3>Neurología</h3>
+                        <p>Tratamiento y prevención de afecciones del sistema nervioso central y periférico.</p>
+                        <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i> Ver Doctores</span>
+                    </div>
+                    <div class="doctors-list" style="display: none;">
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dr. Fernando Silva</strong>
+                                <small>Neurólogo Especialista</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dr. Fernando Silva" data-spec="neurologia">Agendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Odontología -->
+                <div class="service-card" data-specialty="odontologia">
+                    <div class="card-header">
+                        <i class="fa-solid fa-tooth"></i>
+                        <h3>Odontología</h3>
+                        <p>Salud e higiene bucal con tratamientos estéticos y correctivos modernos.</p>
+                        <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i> Ver Doctores</span>
+                    </div>
+                    <div class="doctors-list" style="display: none;">
+                        <div class="doctor-item">
+                            <div>
+                                <strong>Dra. Sofia Martínez</strong>
+                                <small>Odontóloga Estética</small>
+                            </div>
+                            <button class="btn-book-doc" data-doc="Dra. Sofia Martínez" data-spec="odontologia">Agendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Citas con Iconos en los Inputs (Imagen 8) -->
+    <section class="appointment" id="citas">
+        <div class="container">
+            <div class="appointment-form-container">
+                <h2>Agenda tu Cita Médica</h2>
+                <p>Completa el formulario y nos pondremos en contacto para confirmar tu horario en Clínica Salvador.</p>
+                
+                <form id="appointment-form" class="appointment-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-user field-icon"></i>
+                            <input type="text" id="nombre" placeholder="Ej. Ana García" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-envelope field-icon"></i>
+                            <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especialidad">Especialidad Preferida</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-stethoscope field-icon"></i>
+                            <select id="especialidad" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="medicina-general">Medicina General</option>
+                                <option value="cardiologia">Cardiología</option>
+                                <option value="pediatria">Pediatría</option>
+                                <option value="neurologia">Neurología</option>
+                                <option value="odontologia">Odontología</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doctor">Médico / Especialista</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-user-md field-icon"></i>
+                            <select id="doctor" required>
+                                <option value="">Primero selecciona una especialidad</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha Deseada</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-calendar-days field-icon"></i>
+                            <input type="date" id="fecha" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Confirmar Cita</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3><i class="fa-solid fa-user-doctor"></i> Clínica Salvador</h3>
+                <p>Comprometidos con tu salud y calidad de vida.</p>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-location-dot"></i> Av. Salvador #123, Ciudad Médica</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (234) 567-890</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@clinicasalvador.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clínica Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
